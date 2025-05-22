@@ -1,18 +1,19 @@
 import { test, expect } from '@playwright/test';
-import { Account } from './pages/account.page';
+
+import { General } from './page/general.page';
+import { FormLogin } from './components/form-login';
+
 import { testData } from '../test.data';
 
 test.beforeEach(async({page}) => {
-    const LoginPage = new Account(page)
-
-    await LoginPage.openLoginPage(testData.URL + testData.pathAccount)
-    await LoginPage.login(testData.email, testData.password)
+    const homePage = new General(page)
+    await homePage.openSite(testData.URL + testData.pathAccount)
 })
 
 test('checking Login', async({page}) => {
 
-    const LoginPage = new Account(page)
-    await LoginPage.openLoginPage(testData.URL + testData.pathAccount)
+    const LoginPage = new FormLogin(page)
+    await LoginPage.login(testData.email, testData.password)
 
     await page.waitForURL(`**/customer/account/**`);
 })
