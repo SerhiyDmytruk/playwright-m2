@@ -1,6 +1,4 @@
 export enum configs {
-    URL = 'https://prelive.deraat.nl/',
-    // URL = 'https://silvana.hoofdfabriek.io/',
+    URL = 'https://magento-demo.mageplaza.com/',
     pathAccount = '/customer/account/login/',
-    pathCategory = '/product-categories/',
 }
