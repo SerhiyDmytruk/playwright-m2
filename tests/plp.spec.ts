@@ -9,6 +9,9 @@ test.beforeEach(async({page}) => {
 })
 
 test('checking Filter', async({page}) => {
+    const filterOption = page.locator(testData.filterOption);
+    const href = await filterOption.getAttribute('href'); 
 
-
+    await filterOption.click()
+    await page.waitForURL(href);
 })

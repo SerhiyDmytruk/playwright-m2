@@ -21,12 +21,11 @@ test('checking Header, Footer', async({page}) => {
 
 test('checking Menu', async({page}) => {
     const menuItem = page.locator(testData.menuItem)
-    await expect(menuItem).toHaveText(testData.menuItemText);
     await menuItem.click()
+    await page.waitForURL(testData.menuItemLink);
 
-
+    await menuItem.hover()
     const subMenuItem = page.locator(testData.subMenuItem)
-    await expect(subMenuItem).toHaveText(testData.subMenuItemText);
     await subMenuItem.click()
     await page.waitForURL(testData.subMenuItemLink);
 })

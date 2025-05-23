@@ -3,21 +3,27 @@ import {configs} from "./configs";
 export const testData = {
     URL : configs.URL,
     pathAccount : configs.pathAccount,
-    email : 'ernst@hoofdfabriek.nl',
-    password : 'S321654s',
+    
+    email : 'roni_cost@example.com',
+    password : 'roni_cost3@example.com',
 
-    menuItem: '.page-header .desktop-nav:not(.desktop-nav-additional) .level-0 a.level-0',
-    menuItemText: 'Producten',
+    menuItem: '.sections.nav-sections #ui-id-3',
+    menuItemText: 'Women',
+    menuItemLink: '**/default/women.html',
 
-    subMenuItem: '#desktop-menu-main-products-wrapper .grid li:nth-child(1) .level-1',
-    subMenuItemText: 'Brand-inbraakwerende kluizen',
-    subMenuItemLink: '**/brand-inbraakwerende-kluizen-01.html',
-    pathCategory : '/brand-inbraakwerende-kluizen-01.html',
+    subMenuItem: '.sections.nav-sections #ui-id-4',
+    subMenuItemText: 'Tops',
+    subMenuItemLink: '**/default/women/tops-women.html',
+
+    pathCategory : '/default/men/tops-men.html',
 
     header: '.page-header',
-    headerLogo: '.page-header .lg\\:container.w-full.pr-4.lg\\:pr-6.flex > a img',
+    headerLogo: '.page-header .logo img',
 
     footer: '.page-footer',
-    footerItemCopyright: '.page-footer .text-\\[10px\\].leading-3.text-accent-secondary.font-semibold:first-child',
-    footerItemCopyrightText: '\n    ©2025 De Raat Security Products'
+    footerItemCopyright: '.copyright span',
+    footerItemCopyrightText: 'Copyright © 2013-present Magento, Inc. All rights reserved.',
+
+    filterItem: '#layered-filter-block .filter-options',
+    filterOption: '#layered-filter-block .filter-options-item:nth-child(2) .item:nth-child(2) > a',
 }
