@@ -15,3 +15,16 @@ test('checking Filter', async({page}) => {
     await filterOption.click()
     await page.waitForURL(href);
 })
+
+test('checking Sorting', async ({ page }) => {
+    const sortItem = page.locator(testData.sortItem);
+    const sortOption = 'price';
+
+    await sortItem.waitFor({ state: 'visible' });
+    await sortItem.selectOption({ value: sortOption });
+
+    await page.pause();
+
+    const defaultValue = await sortItem.inputValue();
+    await expect(defaultValue).toBe(sortOption)
+});
