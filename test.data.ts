@@ -26,4 +26,6 @@ export const testData = {
 
     filterItem: '#layered-filter-block .filter-options',
     filterOption: '#layered-filter-block .filter-options-item:nth-child(2) .item:nth-child(2) > a',
+
+    sortItem: '#sorter',
 }
