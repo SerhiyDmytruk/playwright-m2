@@ -17,7 +17,7 @@ test('checking Filter', async({page}) => {
 })
 
 test('checking Sorting', async ({ page }) => {
-    const sortItem = page.locator(testData.sortItem);
+    const sortItem = page.locator(testData.sortEl);
     const sortOption = 'price';
 
     await sortItem.waitFor({ state: 'visible' });
@@ -27,4 +27,14 @@ test('checking Sorting', async ({ page }) => {
 
     const defaultValue = await sortItem.inputValue();
     await expect(defaultValue).toBe(sortOption)
+});
+
+
+test('checking Pagination', async ({ page }) => {
+    const paginationElPage = page.locator(testData.paginationElPage);
+    const paginationElCurrentPageHREF = await paginationElPage.first().getAttribute('href');
+
+    await paginationElPage.first().click();
+
+    await page.waitForURL(paginationElCurrentPageHREF);
 });

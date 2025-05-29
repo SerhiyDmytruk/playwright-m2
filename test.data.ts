@@ -27,5 +27,9 @@ export const testData = {
     filterItem: '#layered-filter-block .filter-options',
     filterOption: '#layered-filter-block .filter-options-item:nth-child(2) .item:nth-child(2) > a',
 
-    sortItem: '#sorter',
+    sortEl: '#sorter',
+
+    paginationEl: '.toolbar-products .pages .pages-items',
+    paginationElPage: '.toolbar-products .pages .pages-items .item:not(.current) .page',
+    paginationElCurrentPage: '.toolbar-products .pages .pages-items .item.current .page',
 }
