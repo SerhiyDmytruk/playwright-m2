@@ -32,4 +32,12 @@ export const testData = {
     paginationEl: '.toolbar-products .pages .pages-items',
     paginationElPage: '.toolbar-products .pages .pages-items .item:not(.current) .page',
     paginationElCurrentPage: '.toolbar-products .pages .pages-items .item.current .page',
+
+    pathCategoryWithSwatch: 'default/men/tops-men/tanks-men.html',
+    configurableProductId: '676',
+    configurableProduct: '#product-item-info_676',
+    productSwatchSizeDomEL: '#product-item-info_676 [data-attribute-code="size"]',
+    productSwatchColorDomEL: '#product-item-info_676 [data-attribute-code="color"]',
+    productSwatchOptionDomEL: '.swatch-option',
+    productAddToCartDomEL: '#product-item-info_676 form .action.tocart',
 }
