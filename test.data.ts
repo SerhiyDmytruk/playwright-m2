@@ -40,4 +40,6 @@ export const testData = {
     productSwatchColorDomEL: '#product-item-info_676 [data-attribute-code="color"]',
     productSwatchOptionDomEL: '.swatch-option',
     productAddToCartDomEL: '#product-item-info_676 form .action.tocart',
+
+    modeDomEl: '.toolbar-products .modes > a',
 }

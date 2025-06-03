@@ -30,8 +30,6 @@ test('checking Swatch', async ({ page }) => {
         return storageItem ? JSON.parse(storageItem).cart.items[0] : '';
     });
 
-    console.log('Local localStorageValue:', localStorageValue);
-
     expect(localStorageValue).toBeDefined();
     expect(localStorageValue.product_id).toContain(testData.configurableProductId);
 });
