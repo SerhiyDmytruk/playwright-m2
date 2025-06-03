@@ -13,7 +13,7 @@ test('checking Filter', async({page}) => {
     const href = await filterOption.getAttribute('href'); 
 
     await filterOption.click()
-    await page.waitForURL(href);
+    await expect(page).toHaveURL(href);
 })
 
 test('checking Sorting', async ({ page }) => {
@@ -36,5 +36,16 @@ test('checking Pagination', async ({ page }) => {
 
     await paginationElPage.first().click();
 
-    await page.waitForURL(paginationElCurrentPageHREF);
+    await expect(page).toHaveURL(paginationElCurrentPageHREF);
+});
+
+
+test('checking Product mode view', async ({ page }) => {
+    const modeDomEl = page.locator(testData.modeDomEl);
+
+    await page.waitForTimeout(1000);
+
+    await modeDomEl.first().click({ modifiers: ['Control']  });
+
+    await expect(page).toHaveURL(`${testData.pathCategory}?product_list_mode=list`);
 });
