@@ -15,5 +15,6 @@ test('checking Login', async({page}) => {
     const LoginPage = new FormLogin(page)
     await LoginPage.login(testData.email, testData.password)
 
+    await page.waitForTimeout(1000);
     await page.waitForURL(`**/customer/account/**`);
 })

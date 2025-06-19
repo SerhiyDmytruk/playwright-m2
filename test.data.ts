@@ -42,4 +42,16 @@ export const testData = {
     productAddToCartDomEL: '#product-item-info_676 form .action.tocart',
 
     modeDomEl: '.toolbar-products .modes > a',
+
+    pathPDPSimple: '/default/fusion-backpack.html',
+    pathPDPSimpleAddToCartButtonDomEL: '.product-info-main form #product-addtocart-button',
+    pathPDPSimpleId: '6',
+
+    pathPDPConfigurable: 'default/argus-all-weather-tank.html',
+    pdpConfigurableId: '694',
+    pathPDPConfigurableSizeDomEL: '.product-info-main [data-attribute-code="size"]',
+    pathPDPConfigurableColorDomEL: '.product-info-main [data-attribute-code="color"]',
+    pathPDPConfigurableOptionDomEL: '.swatch-option',
+    pathPDPConfigurableAddToCartButtonDomEL: '.product-info-main form .action.tocart',
+
 }
