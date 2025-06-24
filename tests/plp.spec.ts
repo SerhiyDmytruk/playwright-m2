@@ -10,9 +10,13 @@ test.beforeEach(async({page}) => {
 
 test('checking Filter', async({page}) => {
     const filterOption = page.locator(testData.filterOption);
-    const href = await filterOption.getAttribute('href'); 
+    const href = await filterOption.getAttribute('href');
 
-    await filterOption.click()
+    if (!href) {
+        throw new Error('Filter option href is null');
+    }
+
+    await filterOption.click();
     await expect(page).toHaveURL(href);
 })
 
@@ -33,6 +37,10 @@ test('checking Sorting', async ({ page }) => {
 test('checking Pagination', async ({ page }) => {
     const paginationElPage = page.locator(testData.paginationElPage);
     const paginationElCurrentPageHREF = await paginationElPage.first().getAttribute('href');
+
+    if (!paginationElCurrentPageHREF) {
+        throw new Error('Filter option paginationElCurrentPageHREF is null');
+    }
 
     await paginationElPage.first().click();
 
