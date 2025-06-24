@@ -45,7 +45,7 @@ export const testData = {
 
     pathPDPSimple: '/default/fusion-backpack.html',
     pathPDPSimpleAddToCartButtonDomEL: '.product-info-main form #product-addtocart-button',
-    pathPDPSimpleId: '6',
+    pdpSimpleId: '6',
 
     pathPDPConfigurable: 'default/argus-all-weather-tank.html',
     pdpConfigurableId: '694',

@@ -24,5 +24,5 @@ test('checking AddToCart', async ({ page }) => {
     });
 
     expect(localStorageValue).toBeDefined();
-    expect(localStorageValue.product_id).toContain(testData.pdpConfigurableId);
+    expect(localStorageValue.product_id).toContain(testData.pdpSimpleId);
 });
